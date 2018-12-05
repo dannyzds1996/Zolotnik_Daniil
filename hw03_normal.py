@@ -55,24 +55,24 @@ print(list(filter_func(lambda x: True if x % 2 == 0 else False,
 # Задача-4:
 # Даны четыре точки А1(х1, у1), А2(x2 ,у2), А3(x3 , у3), А4(х4, у4).
 # Определить, будут ли они вершинами параллелограмма.
-def is_parallelogram(a1, a2, a3, a4):
+def is_parallelogram():
 
-    x1 = int(input("Enter x1: "))
-    y1 = int(input("Enter y1: "))
-    x2 = int(input("Enter x2: "))
-    y2 = int(input("Enter y2: "))
-    x3 = int(input("Enter x3: "))
-    y3 = int(input("Enter y3: "))
-    x4 = int(input("Enter x4: "))
-    y4 = int(input("Enter y4: "))
-    a1 = [x1, y1]
-    a2 = [x2, y2]
-    a3 = [x3, y3]
-    a4 = [x4, y4]
+    x1 = float(input("Enter x1: "))
+    y1 = float(input("Enter y1: "))
+    x2 = float(input("Enter x2: "))
+    y2 = float(input("Enter y2: "))
+    x3 = float(input("Enter x3: "))
+    y3 = float(input("Enter y3: "))
+    x4 = float(input("Enter x4: "))
+    y4 = float(input("Enter y4: "))
+    a1 = (x1, y1)
+    a2 = (x2, y2)
+    a3 = (x3, y3)
+    a4 = (x4, y4)
 
     if abs(a3[0] - a2[0]) == abs(a4[0] - a1[0]) and abs(a2[1] - a1[1]) == abs(a3[1] - a4[1]):
-        return True
+        print("This parallelogramm")
     else:
-        return False
+        print("This is not parallelogramm")
 
-is_parallelogram(a1, a2, a3, a4)
+is_parallelogram()
